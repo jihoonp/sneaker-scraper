@@ -24,9 +24,9 @@ var offWhiteAirJordan1SiteNames = ["Stadium Goods", "Flight Club"];
 
 function greetMessage() {
 	console.log("Which shoe would you like to search for? Enter the number next to the option.");
-	console.log("1) Off White Jordan 1, size 9");
+	console.log("1) Off White Air Jordan 1, size 9");
 	console.log("2) Yeezy Boost 350 v2, Triple White, size 9");
-	console.log("3) Off-White Presto Black, size 9");
+	console.log("3) Off White Presto Black, size 9");
 	console.log("4) Quit");
 }
 
@@ -36,7 +36,7 @@ function exitMessage() {
 
 async function searchHelper(url, xpath, siteName) {
 
-	const browser = await puppeteer.launch( {headless: true});
+	const browser = await puppeteer.launch( {headless: false});
 	const page = await browser.newPage();
   
 	await page.goto(url);
